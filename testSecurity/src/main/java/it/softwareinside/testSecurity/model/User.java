@@ -25,7 +25,7 @@ public class User {
 
     private LocalDate registerDate;
     
-    private boolean isEnabled=true;
+    private boolean isEnabled=false;
 
     @DBRef
     private Set<Role> roles = new HashSet<>();
