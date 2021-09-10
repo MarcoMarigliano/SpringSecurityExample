@@ -50,7 +50,7 @@ public class CustomUserDetailsService implements UserDetailsService {
 	}
 
 	private UserDetails buildUserForAuthentication(User user, List<GrantedAuthority> authorities) {
-		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), authorities);
+		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(),user.isEnabled() ,false, false, false, authorities);
 	}
 }
 
