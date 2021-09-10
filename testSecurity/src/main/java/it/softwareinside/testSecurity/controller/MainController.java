@@ -55,7 +55,7 @@ public class MainController {
 		LocalDate today
 		= LocalDate.now();
 		user.setRegisterDate(today);
-		Role userRole = roleRepository.findByRole("ADMIN");
+		Role userRole = roleRepository.findByRole("USER");
 		user.setRoles(new HashSet<>(Arrays.asList(userRole)));
 		userRepository.save(user);
 		return "register_success";
